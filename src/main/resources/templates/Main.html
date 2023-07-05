@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <div>
+        <form th:action="@{/verify}" method="post" >
+            <input type="text" name="username" id="uname">
+            <input type="hidden" name="_csrf" th:value="${_csrf}"> <!--Hidden Element for CSRF Token-->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
